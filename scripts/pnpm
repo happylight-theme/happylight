@@ -1,0 +1,41 @@
+#!/bin/sh
+
+__DIR__=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+
+__REPOROOT__=$(pwd)
+_loopdetect=0
+
+until [ -f "${__REPOROOT__}/rush.json" ] \
+    || [ "${__REPOROOT__}" = "" ] \
+    || [ "${_loopdetect}" -gt 100 ]
+do
+    __REPOROOT__="${__REPOROOT__%/*}"
+    _loopdetect=$((_loopdetect + 1))
+done
+
+if [ ! -f "${__REPOROOT__}/rush.json" ]; then
+    echo "File rush.json cannot be found in ${__DIR__} and its parents."
+    exit 1
+fi
+
+__REPOROOT__=$(CDPATH= cd -- "${__REPOROOT__}" && pwd)
+
+for _arg in $@; do
+    for _i in import install i install-test it; do
+        if [ "$_arg" = "$_i" ]; then
+            echo "ERROR: PNPM subcommand \"$_arg\" is known as incompatible with Rush."
+            exit 1
+        fi
+    done
+    for _i in add link ln remove rm unlink update up; do
+        if [ "$_arg" = "$_i" ]; then
+            echo "Warning: PNPM subcommand \"$_arg\" invalidates Rush state."
+            echo "Run \"rush install\" or \"rush update\" afterwards."
+        fi
+    done
+done
+
+NPM_CONFIG_WORKSPACE_DIR="\"${__REPOROOT__}/common/temp\"" \
+NPM_CONFIG_STORE_DIR="\"${__REPOROOT__}/common/temp/pnpm-store\"" \
+    "${__REPOROOT__}/common/temp/pnpm-local/node_modules/.bin/pnpm" \
+    $@

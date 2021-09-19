@@ -1,0 +1,23 @@
+#!/bin/sh
+
+__DIR__=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+
+__REPOROOT__=$(pwd)
+_loopdetect=0
+
+until [ -f "${__REPOROOT__}/rush.json" ] \
+    || [ "${__REPOROOT__}" = "" ] \
+    || [ "${_loopdetect}" -gt 100 ]
+do
+    __REPOROOT__="${__REPOROOT__%/*}"
+    _loopdetect=$((_loopdetect + 1))
+done
+
+if [ ! -f "${__REPOROOT__}/rush.json" ]; then
+    echo "File rush.json cannot be found in ${__DIR__} and its parents."
+    exit 1
+fi
+
+__REPOROOT__=$(CDPATH= cd -- "${__REPOROOT__}" && pwd)
+
+node "${__REPOROOT__}/common/scripts/install-run-rush.js" $@

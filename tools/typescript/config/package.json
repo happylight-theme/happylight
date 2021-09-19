@@ -1,0 +1,23 @@
+{
+  "name": "@happylight-theme/typescript-config",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "./profiles/default.json",
+  "scripts": {
+  },
+  "engines": {
+    "node": ">=12",
+    "pnpm": ">=6",
+    "npm": ">=999",
+    "yarn": ">=999"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "typescript": "^4.4.2"
+  },
+  "peerDependencies": {
+    "typescript": "^3.0.0 || ^4.0.0"
+  }
+}

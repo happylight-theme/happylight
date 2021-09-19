@@ -1,0 +1,47 @@
+{
+  "name": "@happylight-theme/colors",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "exports": {
+    "./colors.json": "./dist/colors.json",
+    "./colors.yaml": "./dist/colors.yaml",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "hl:build": "",
+    "hl:dev": "nodemon --watch src --watch scripts --exec ./node_modules/.bin/ts-node ./scripts/generate-colors.ts",
+    "hl:lint:check": "",
+    "hl:lint:fix": "",
+    "hl:scm-pre-commit": "",
+    "build": "rimraf ./dist && ts-node ./scripts/generate-colors.ts",
+    "generate-colors": "ts-node ./scripts/generate-colors.ts",
+    "dev": "nodemon --watch src --watch scripts --exec ./node_modules/.bin/ts-node ./scripts/generate-colors.ts"
+  },
+  "engines": {
+    "node": ">=12",
+    "pnpm": ">=6",
+    "npm": ">=999",
+    "yarn": ">=999"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@happylight-theme/eslint-config": "workspace:*",
+    "@happylight-theme/prettier-config": "workspace:*",
+    "@happylight-theme/scripts": "workspace:*",
+    "@happylight-theme/typescript-config": "workspace:*",
+    "@types/js-yaml": "^4.0.3",
+    "@types/mkdirp": "^1.0.2",
+    "@types/node": "^12.20.25",
+    "eslint": "^7.32.0",
+    "js-yaml": "^4.1.0",
+    "mkdirp": "^1.0.4",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.2.1",
+    "type-fest": "^2.2.0",
+    "typescript": "^4.4.2"
+  }
+}

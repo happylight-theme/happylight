@@ -1,0 +1,98 @@
+// DO NOT ADD COMMENTS IN THIS FILE.  They will be lost when the Rush tool resaves it.
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
+  "packages": [
+    {
+      "name": "@happylight-theme/eslint-config",
+      "allowedCategories": [ "package" ]
+    },
+    {
+      "name": "@happylight-theme/prettier-config",
+      "allowedCategories": [ "package" ]
+    },
+    {
+      "name": "@happylight-theme/scripts",
+      "allowedCategories": [ "package" ]
+    },
+    {
+      "name": "@happylight-theme/typescript-config",
+      "allowedCategories": [ "package" ]
+    },
+    {
+      "name": "@microsoft/rush-lib",
+      "allowedCategories": [ "scripts" ]
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "allowedCategories": [ "tools" ]
+    },
+    {
+      "name": "@typescript-eslint/experimental-utils",
+      "allowedCategories": [ "tools" ]
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "allowedCategories": [ "tools" ]
+    },
+    {
+      "name": "@typescript-eslint/typescript-estree",
+      "allowedCategories": [ "tools" ]
+    },
+    {
+      "name": "colorette",
+      "allowedCategories": [ "scripts" ]
+    },
+    {
+      "name": "eslint",
+      "allowedCategories": [ "package", "tools" ]
+    },
+    {
+      "name": "eslint-config-prettier",
+      "allowedCategories": [ "tools" ]
+    },
+    {
+      "name": "eslint-plugin-prettier",
+      "allowedCategories": [ "tools" ]
+    },
+    {
+      "name": "execa",
+      "allowedCategories": [ "scripts" ]
+    },
+    {
+      "name": "js-yaml",
+      "allowedCategories": [ "package", "scripts" ]
+    },
+    {
+      "name": "mkdirp",
+      "allowedCategories": [ "package" ]
+    },
+    {
+      "name": "nodemon",
+      "allowedCategories": [ "package" ]
+    },
+    {
+      "name": "prettier",
+      "allowedCategories": [ "package", "tools" ]
+    },
+    {
+      "name": "rimraf",
+      "allowedCategories": [ "package" ]
+    },
+    {
+      "name": "ts-node",
+      "allowedCategories": [ "package", "scripts" ]
+    },
+    {
+      "name": "type-fest",
+      "allowedCategories": [ "package", "scripts" ]
+    },
+    {
+      "name": "typescript",
+      "allowedCategories": [ "package", "scripts", "tools" ]
+    },
+    {
+      "name": "yargs",
+      "allowedCategories": [ "scripts" ]
+    }
+  ]
+}

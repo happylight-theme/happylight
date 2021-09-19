@@ -1,0 +1,27 @@
+{
+    "name": "happylight",
+    "displayName": "HappyLight",
+    "description": "",
+    "version": "0.1.0",
+    "publisher": "happylight",
+    "engines": {
+        "vscode": "^1.44.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "HappyLight",
+                "uiTheme": "vs",
+                "path": "./themes/HappyLight-color-theme.json"
+            },
+            {
+                "label": "HappyLight (Syntax Only)",
+                "uiTheme": "vs",
+                "path": "./themes/HappyLight-syntax-color-theme.json"
+            }
+        ]
+    }
+}

@@ -1,0 +1,9 @@
+_base:
+
+_common:
+
+default:
+  extends: _common
+  name:
+  ui:
+  syntax:

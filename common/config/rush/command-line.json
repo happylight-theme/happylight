@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/command-line.schema.json",
+
+  "commands": [
+    {
+      "name": "hl:dev",
+      "commandKind": "bulk",
+      "summary": "Run dev scripts.",
+      "safeForSimultaneousRushProcesses": true,
+      "enableParallelism": true,
+      "ignoreDependencyOrder": false,
+      "ignoreMissingScript": true,
+      "allowWarningsInSuccessfulBuild": false,
+      "incremental": false,
+      "watchForChanges": false
+    }
+  ],
+
+  "parameters": [
+  ]
+}

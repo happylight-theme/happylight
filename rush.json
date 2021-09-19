@@ -1,0 +1,61 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+
+  "rushVersion": "5.53.0",
+
+  "pnpmVersion": "6.15.1",
+  "pnpmOptions": {
+    "strictPeerDependencies": true,
+    "useWorkspaces": true
+  },
+
+  "nodeSupportedVersionRange": ">=12.13.0 <13.0.0 || >=14.15.0 <15.0.0",
+  "ensureConsistentVersions": true,
+
+  "projectFolderMinDepth": 1,
+  "projectFolderMaxDepth": 3,
+
+  "telemetryEnabled": false,
+
+  "approvedPackagesPolicy": {
+    "reviewCategories": [
+      "package",
+      "scripts",
+      "tools"
+    ],
+    "ignoredNpmScopes": ["@types"]
+  },
+
+  "projects": [
+    {
+      "packageName": "@happylight-theme/colors",
+      "projectFolder": "packages/colors",
+      "reviewCategory": "package",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@happylight-theme/scripts",
+      "projectFolder": "scripts",
+      "reviewCategory": "scripts",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@happylight-theme/eslint-config",
+      "projectFolder": "tools/eslint/config",
+      "reviewCategory": "tools",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@happylight-theme/prettier-config",
+      "projectFolder": "tools/prettier/config",
+      "reviewCategory": "tools",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@happylight-theme/typescript-config",
+      "projectFolder": "tools/typescript/config",
+      "reviewCategory": "tools",
+      "shouldPublish": false
+    }
+  ]
+}

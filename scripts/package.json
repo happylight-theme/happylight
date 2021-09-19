@@ -1,0 +1,33 @@
+{
+  "name": "@happylight-theme/scripts",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "hl:build": "",
+    "hl:dev": "",
+    "hl:lint:check": "",
+    "hl:lint:fix": "",
+    "hl:scm-pre-commit": ""
+  },
+  "engines": {
+    "node": ">=12",
+    "pnpm": ">=6",
+    "npm": ">=999",
+    "yarn": ">=999"
+  },
+  "dependencies": {
+    "@microsoft/rush-lib": "^5.53.0",
+    "colorette": "^1.3.0",
+    "execa": "^5.1.1",
+    "js-yaml": "^4.1.0",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2",
+    "yargs": "^17.1.1"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.3",
+    "@types/node": "^12.20.25",
+    "type-fest": "^2.2.0"
+  }
+}
